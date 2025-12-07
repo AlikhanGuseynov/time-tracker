@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Time Tracker">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5c6bc0" />
+      <stop offset="100%" stop-color="#3949ab" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#g)" />
+  <circle cx="32" cy="32" r="22" fill="#fff" opacity="0.9" />
+  <circle cx="32" cy="32" r="19" fill="#e8eaf6" />
+  <path d="M32 16v16l11 7" fill="none" stroke="#3f51b5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="32" cy="32" r="3" fill="#3f51b5" />
+</svg>

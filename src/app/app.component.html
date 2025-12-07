@@ -1,0 +1,13 @@
+<div class="app-shell">
+  <div class="navbar">
+    <div>
+      <h1 style="margin: 0">Time Tracker</h1>
+      <div class="badge">Electron + Angular</div>
+    </div>
+    <div class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Main</a>
+      <a routerLink="/stats" routerLinkActive="active">Statistics</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

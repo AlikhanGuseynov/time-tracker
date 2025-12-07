@@ -1,0 +1,21 @@
+<div class="card">
+  <h2 class="section-title">Statistics</h2>
+  <div class="filter-bar">
+    <button class="filter-btn" [class.active]="filter === 'today'" (click)="setFilter('today')">Today</button>
+    <button class="filter-btn" [class.active]="filter === 'yesterday'" (click)="setFilter('yesterday')">Yesterday</button>
+    <button class="filter-btn" [class.active]="filter === 'week'" (click)="setFilter('week')">This week</button>
+    <button class="filter-btn" [class.active]="filter === 'month'" (click)="setFilter('month')">This month</button>
+  </div>
+
+  <div class="grid">
+    <div class="summary-row" *ngFor="let entry of (getFilteredSummary() | keyvalue)">
+      <div class="muted">{{ entry.key }}</div>
+      <div>{{ formatDuration(entry.value) }}</div>
+    </div>
+  </div>
+
+  <div class="summary-row" style="margin-top: 12px">
+    <div class="muted">Total for period:</div>
+    <div>{{ formatDuration(getTotalDuration()) }}</div>
+  </div>
+</div>

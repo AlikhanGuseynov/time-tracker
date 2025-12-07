@@ -1,0 +1,28 @@
+<div class="card">
+  <h2 class="section-title">Main Screen</h2>
+  <div class="tabs">
+    <div
+      *ngFor="let category of categories"
+      class="tab"
+      [class.active]="isActive(category)"
+      (click)="start(category)"
+    >
+      {{ category }}
+    </div>
+  </div>
+
+  <div class="timer-display">{{ formatTimer(getTimer()) }}</div>
+  <button class="button" (click)="activeCategory ? pause() : start(categories[0])">
+    {{ activeCategory ? 'Pause' : 'Start' }}
+  </button>
+</div>
+
+<div class="card" style="margin-top: 16px">
+  <h3 class="section-title">Daily summary</h3>
+  <div class="grid">
+    <div class="summary-row" *ngFor="let category of categories">
+      <div class="muted">{{ category }}</div>
+      <div>{{ formatTimer(getTodaySummary()[category] || 0) }}</div>
+    </div>
+  </div>
+</div>

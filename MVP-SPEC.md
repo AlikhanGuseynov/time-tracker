@@ -1,86 +1,86 @@
 # Time Tracker — MVP1 (Electron + Angular)
 
 ## 1. Project Setup
-- [ ] Initialize Angular project  
-- [ ] Add Electron (main, preload, build config)  
-- [ ] Add Electron launch script  
-- [ ] Ensure Angular loads inside Electron window  
-- [ ] Add simple app icon  
+- [x] Initialize Angular project
+- [x] Add Electron (main, preload, build config)
+- [x] Add Electron launch script
+- [x] Ensure Angular loads inside Electron window
+- [x] Add simple app icon
 
 ## 2. Project Structure
-- [ ] Create folder `/electron`  
-- [ ] Add `/electron/main.ts`  
-- [ ] Add `/electron/preload.ts`  
-- [ ] Add `/src/app/models/time-session.ts`  
-- [ ] Add `/src/app/services/time-tracker.service.ts`  
-- [ ] Add `/src/app/components/main/`  
-- [ ] Add `/src/app/components/stats/`  
+- [x] Create folder `/electron`
+- [x] Add `/electron/main.ts`
+- [x] Add `/electron/preload.ts`
+- [x] Add `/src/app/models/time-session.ts`
+- [x] Add `/src/app/services/time-tracker.service.ts`
+- [x] Add `/src/app/components/main/`
+- [x] Add `/src/app/components/stats/`
 
 ## 3. Electron Window
-- [ ] Create BrowserWindow  
-- [ ] Load Angular build  
-- [ ] Attach preload script  
+- [x] Create BrowserWindow
+- [x] Load Angular build
+- [x] Attach preload script
 
 ## 4. Window Close Behaviour (Tray Mode)
-- [ ] Override window `close` event  
-- [ ] Prevent full exit  
-- [ ] Use `window.hide()` instead  
-- [ ] Keep app running in background  
+- [x] Override window `close` event
+- [x] Prevent full exit
+- [x] Use `window.hide()` instead
+- [x] Keep app running in background
 
 ## 5. System Tray
-- [ ] Create tray icon  
-- [ ] Add tray menu:  
-  - [ ] “Open” — show window  
-  - [ ] “Exit” — quit app  
+- [x] Create tray icon
+- [x] Add tray menu:
+  - [x] “Open” — show window
+  - [x] “Exit” — quit app
 
 ## 6. Graceful Exit
-- [ ] On “Exit” menu click — send IPC to Angular: “finish active session”  
-- [ ] Save all data  
-- [ ] Fully quit Electron  
+- [x] On “Exit” menu click — send IPC to Angular: “finish active session”
+- [x] Save all data
+- [x] Fully quit Electron
 
 ## 7. Preload API
-- [ ] Expose safe API:
-  - [ ] `loadSessions()`  
-  - [ ] `saveSessions(sessions)`  
+- [x] Expose safe API:
+  - [x] `loadSessions()`
+  - [x] `saveSessions(sessions)`
 
 ## 8. IPC (Main Process)
-- [ ] Implement channel `timeTracker:loadSessions`  
-- [ ] Implement channel `timeTracker:saveSessions`  
-- [ ] Store data in JSON file:
-  - [ ] Path: `app.getPath('userData')`  
-  - [ ] File: `time-tracker-data.json`  
+- [x] Implement channel `timeTracker:loadSessions`
+- [x] Implement channel `timeTracker:saveSessions`
+- [x] Store data in JSON file:
+  - [x] Path: `app.getPath('userData')`
+  - [x] File: `time-tracker-data.json`
 
 ## 9. Time Tracker Service (Angular)
-- [ ] Store list of sessions in memory  
-- [ ] `startCategory(category)`  
-- [ ] `pause()`  
-- [ ] `getSessions()`  
-- [ ] Detect and continue unfinished session on app load  
-- [ ] After every change — call saveSessions  
+- [x] Store list of sessions in memory
+- [x] `startCategory(category)`
+- [x] `pause()`
+- [x] `getSessions()`
+- [x] Detect and continue unfinished session on app load
+- [x] After every change — call saveSessions
 
 ## 10. Main Screen (Angular)
-- [ ] Show fixed category tabs:
-  - [ ] agile_meetings  
-  - [ ] development  
-  - [ ] documentation  
-  - [ ] lead_meetings  
-  - [ ] clarification_meetings  
-- [ ] Highlight active tab  
-- [ ] Start/stop category via service  
-- [ ] Timer (HH:MM:SS) updating every second  
-- [ ] Pause button  
-- [ ] Daily summary block at bottom  
+- [x] Show fixed category tabs:
+  - [x] agile_meetings
+  - [x] development
+  - [x] documentation
+  - [x] lead_meetings
+  - [x] clarification_meetings
+- [x] Highlight active tab
+- [x] Start/stop category via service
+- [x] Timer (HH:MM:SS) updating every second
+- [x] Pause button
+- [x] Daily summary block at bottom
 
 ## 11. Statistics Screen (Angular)
-- [ ] Add StatsComponent  
-- [ ] Filters:
-  - [ ] Today  
-  - [ ] Yesterday  
-  - [ ] This week  
-  - [ ] This month  
-- [ ] Sum durations per category  
-- [ ] Output:
-  - [ ] Category name  
-  - [ ] Total time (HH:MM)  
-- [ ] Summary: “Total for period: Xh Ym”  
+- [x] Add StatsComponent
+- [x] Filters:
+  - [x] Today
+  - [x] Yesterday
+  - [x] This week
+  - [x] This month
+- [x] Sum durations per category
+- [x] Output:
+  - [x] Category name
+  - [x] Total time (HH:MM)
+- [x] Summary: “Total for period: Xh Ym”
 
